@@ -1,0 +1,24 @@
+<h1>Cadastrar corrida</h1>
+<form id="form-corrida" #form="ngForm" novalidate>
+    <div class="col-8">
+        <label for="id-motorista">Código do motorista: </label>
+        <input tabindex="1" autofocus (focusout)="procurarMotorista($event)" type="text" id="id-motorista" [class.has-success]="idMotorista.valid && (idMotorista.dirty || idMotorista.touched) && (nomeMotorista!==undefined && nomeMotorista!='')" [class.has-error]="!idMotorista.valid && (idMotorista.dirty || idMotorista.touched) && (nomeMotorista===undefined || nomeMotorista=='')" name="idMotorista" #idMotorista="ngModel" mask="000000" placeholder="Código do motorista" autocomplete="off" maxlength="200" required ngModel>
+		<span *ngIf="nomeMotorista!==undefined && nomeMotorista!=''; else elseblock">({{nomeMotorista}})</span>
+		<span #elseblock *ngIf="nomeMotorista!==undefined && nomeMotorista===''">Motorista não encontrado</span>
+    </div>
+	<div class="col-8">
+        <label for="id-passageiro">Código do passageiro: </label>
+        <input tabindex="2" (focusout)="procurarPassageiro($event)" type="text" id="id-passageiro" [class.has-success]="idPassageiro.valid && (idPassageiro.dirty || idPassageiro.touched)" [class.has-error]="!idPassageiro.valid && (idPassageiro.dirty || idPassageiro.touched)" name="idPassageiro" #idPassageiro="ngModel" mask="000000" placeholder="Código do passageiro" autocomplete="off" maxlength="200" required ngModel>
+		<span *ngIf="nomePassageiro!==undefined && nomePassageiro!=''; else elseblock">({{nomePassageiro}})</span>
+		<span #elseblock *ngIf="nomePassageiro!==undefined && nomePassageiro===''">Passageiro não encontrado</span>
+    </div>
+    <br><br>
+	<div class="col-8">
+        <label for="valor-corrida">Valor da Corrida: </label>
+        <input tabindex="3" type="text" id="valor-corrida" [class.has-success]="valorCorrida.valid && (valorCorrida.dirty || valorCorrida.touched)" [class.has-error]="!valorCorrida.valid && (valorCorrida.touched)" name="valorCorrida" #valorCorrida="ngModel" prefix="R$ " mask="0*,00" autocomplete="off" maxlength="200" required ngModel>
+    </div>
+    <div class="col-8">
+		<button tabindex="4" (click)="checkForm(form.value)" [disabled]="!form.valid">Cadastrar</button>
+	</div>
+
+</form>

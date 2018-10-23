@@ -1,0 +1,13 @@
+<a>
+    <div class="col-11 cards">
+        <div id="letter">
+            <span><img src="https://via.placeholder.com/150x150?text={{corrida.idCorrida}}"></span>
+        </div>
+        <div class="infos">
+            <br>
+            <span class="primary-info">{{corrida.nomeMotorista}} <small> - Motorista</small></span><br><br>
+            <span class="secondary-info">{{corrida.nomePassageiro}} <small> - Passageiro</small></span><br><br>
+            <span class="tertiary-info">{{corrida.valorCorrida | currency: "BRL" : 'symbol'}}</span>
+        </div>
+    </div>
+</a>

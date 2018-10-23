@@ -1,0 +1,80 @@
+h1{
+    text-align: center;
+}
+
+#form-motorista{
+    text-align: center;
+}
+
+#form-motorista input{
+    margin: 10px;
+}
+
+#form-motorista input[type=text], #form-motorista input[type=date]{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #BCBCBC;
+    padding: 8px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#form-motorista input[type=text]::placeholder{
+	color:#b3b3b3;
+}
+
+#form-motorista input[type=text]:focus, #form-motorista input[type=date]:focus{
+    outline:none;
+}
+
+#form-motorista button{
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    padding: 8px;
+    color:#222;
+    background-color: #fff;
+    transition: all ease 0.2s;
+    outline: none;
+    cursor: pointer;
+}
+
+#form-motorista button:hover{
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    padding: 8px;
+    color:#fff;
+    background-color: #222;
+}
+
+#form-motorista button:active{
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    padding: 8px;
+    color:#fff;
+    background-color: #000;
+}
+
+#form-motorista button:disabled{
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    padding: 8px;
+    color:#fff;
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.has-error{
+	border-bottom: 2px solid #FC3246 !important;
+}
+
+.has-success{
+	border-bottom: 2px solid #4BB543 !important;
+}
+
+#form-motorista .ng-pristine{
+	color:#b3b3b3;
+}
+
+#form-motorista .ng-dirty{
+	color:#222;
+}

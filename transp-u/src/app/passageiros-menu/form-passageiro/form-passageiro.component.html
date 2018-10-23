@@ -1,0 +1,25 @@
+<h1>Cadastrar passageiro</h1>
+<form id="form-passageiro" #form="ngForm" novalidate>
+    <div class="col-4">
+        <label for="nome-passageiro">Nome: </label>
+        <input type="text" id="nome-passageiro" [class.has-success]="nome.valid && (nome.dirty || nome.touched)" [class.has-error]="!nome.valid && (nome.dirty || nome.touched)" name="nomePassageiro" #nome="ngModel" placeholder="Nome do passageiro" autocomplete="off" maxlength="200" required ngModel>
+    </div>
+    <div class="col-4">
+        <label for="data-nasc">Data de nascimento: </label>
+        <input type="date" id="data-nasc" [class.has-success]="data.valid && (data.dirty || data.touched)" [class.has-error]="!data.valid && (data.dirty || data.touched)" name="dataNascPassageiro" #data="ngModel" autocomplete="off" required ngModel>
+    </div>
+    <br><br>
+    <div class="col-4">
+        <label for="cpf">CPF: </label>
+        <input type="text" id="cpf" [class.has-success]="cpf.valid && (cpf.dirty || cpf.touched)" [class.has-error]="!cpf.valid && (cpf.dirty || cpf.touched)" name="cpfPassageiro" #cpf="ngModel" mask='000.000.000-00' placeholder="CPF" autocomplete="off" minlength="11" required ngModel>
+    </div>
+    <div class="col-4">
+        <label>Sexo: </label>
+        <input type="radio" id="sexo-m" name="sexoPassageiro" value="m" required ngModel>
+        <label for="sexo-m">Homem</label>
+        <input type="radio" id="sexo-f" name="sexoPassageiro" value="f" required ngModel>
+        <label for="sexo-f">Mulher</label>
+    </div>
+    <br>
+    <button (click)="checkFormP(form.value)" [disabled]="!form.valid">Cadastrar</button>
+</form>

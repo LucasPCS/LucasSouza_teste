@@ -1,0 +1,31 @@
+.cards{
+    border:1px solid #BCBCBC;
+    border-radius:10px;
+    padding:10px;
+    text-align: left;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.cards div{
+    display: inline-block;
+}
+
+.infos{
+    font-weight: bold;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.primary-info{
+    padding-top:30px;
+    font-size: 2em;
+}
+
+.secondary-info{
+    font-size: 1.1em;
+}
+
+.tertiary-info{
+    font-weight: normal !important;
+}

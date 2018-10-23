@@ -1,0 +1,17 @@
+<a>
+    <div class="col-11 cards" [class.inativo]="motorista.statusMotorista==0">
+        <div id="letter">
+            <span><img src="https://via.placeholder.com/150x150{{motorista.statusMotorista==0 ? '/7e1923/b02331' : '' }}{{'?text='+motorista.idMotorista}}"></span>
+        </div>
+        <div class="infos">
+            <span class="primary-info">{{motorista.nomeMotorista}}</span><br>
+            <span class="tertiary-info"><small><i>CPF: {{cpf}}</i></small></span><br><br>
+            <span class="tertiary-info">{{motorista.sexoMotorista.toLowerCase()=="m" ? 'Homem' : 'Mulher'}}</span>
+            <span class="tertiary-info">, {{idade}}</span><br><br>
+            <span class="secondary-info">{{motorista.modeloCarro}}</span><br />
+            <div class="active-box" (click)="toggleActive(motorista.idMotorista)">
+                <div class="bt-ai" [class.bt-ativo]="motorista.statusMotorista==1" [class.bt-inativo]="motorista.statusMotorista==0"><button></button></div><span> {{motorista.statusMotorista==0 ? "Inativo" : "Ativo"}}</span>
+            </div>
+        </div>
+    </div>
+</a>
