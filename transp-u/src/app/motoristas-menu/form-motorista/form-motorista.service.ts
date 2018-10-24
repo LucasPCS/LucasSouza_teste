@@ -14,7 +14,6 @@ export class FormMotoristaService{
 		let headers = new Headers({'Content-Type':'application/json'});
 		let request = new RequestOptions({headers: headers})
 		let body = JSON.stringify(formMotorista);
-		console.log(body);
 		return this.http.post(`${API}/motorista/create.php`, body, request).pipe(map((message: Response) => message.json()));
 	}
 }

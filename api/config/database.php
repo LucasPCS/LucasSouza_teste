@@ -2,14 +2,8 @@
 
 require_once "core.php";
 class Database extends Core{
-    // specify your own database credentials
-    // private $host = "localhost";
-    // private $db_name = "transp_u";
-    // private $username = "transp_u_master";
-    // private $password = "Ht90tWFOTh4wrn9r";
     public $conn;
 
-    // get the database connection
     public function getConnection(){
 
         $this->conn = null;

@@ -31,7 +31,6 @@ if($num>0){
 			"fkPassageiro" => $fkPassageiro,
 			"valorCorrida" => $valorCorrida
 		);
-
 		array_push($corrida_arr, $corrida_item);
 	}
 	http_response_code(200);

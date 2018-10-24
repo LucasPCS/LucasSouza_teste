@@ -27,7 +27,7 @@ if(!empty($data->idMotorista) &&
 	$corrida->valorCorrida=$data->valorCorrida;
 
 	$motorista->idMotorista=$corrida->fkMotorista;
-	
+
 	$stmt = $motorista->readId();
 
 	$num = $stmt->rowCount();
@@ -61,9 +61,6 @@ if(!empty($data->idMotorista) &&
 			}
 		}
 	}
-
-
-	
 }
 
 else{
