@@ -41,6 +41,14 @@ Na pasta ```LucasSouza_teste\transp-u```, inicie o terminal e execute:
 
 
 ```
+ng build
+```
+
+
+E em seguida:
+
+
+```
 ng serve
 ```
 
