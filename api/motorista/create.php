@@ -28,7 +28,7 @@ if(!empty($data->nomeMotorista) &&
 	$motorista->statusMotorista=$data->statusMotorista;
 	$motorista->sexoMotorista=$data->sexoMotorista;
 
-	$stmt = $motorista->readOne();
+	$stmt = $motorista->readCpf();
 	$num = $stmt->rowCount();
 
 	if($num>0){

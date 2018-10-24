@@ -25,7 +25,8 @@ export class FormMotoristaComponent implements OnInit {
                 window.location.replace("/motorista/todos");
             },
             error => {
-                console.error("Erro ao cadastrar motorista");
+				let message = JSON.parse(error._body);
+				alert("Erro ao cadastrar motorista! "+message.message);
                 return observableThrowError(error);
             }
         );
