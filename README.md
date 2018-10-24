@@ -81,3 +81,23 @@ LucasSouza_teste\transp-u\src\app\app.api.ts
 ## Autores
 
 * **[Lucas Souza](https://github.com/LucasPCS)**
+
+### Nota
+
+Por um déficit de harware, tive que utilizar servidores diferentes em portas diferentes. Por esse motivo, os navegadores modernos impedem a conexão de alguns componentes, o que gera erros de CORS (Cross-origin resource sharing). Isto posto, a solução temporária que encontrei, foi forçar que o navegador desabilite esta função.
+
+Para o Chrome no Windows, é possível criar um atalho do Chrome e ao final do caminho, adicionar o seguinte argumento:
+
+
+```
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --user-data-dir="C:/Chrome dev session" --disable-web-security
+```
+
+
+**Importante!**
+
+Isso desabilita uma série de medidas de segurança do navegador, e só deve ser usado para a execução do projeto.
+
+Para saber mais:
+* [Disable same origin policy in Chrome](https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome)
+* [Disable firefox same origin policy](https://stackoverflow.com/questions/17088609/disable-firefox-same-origin-policy)
