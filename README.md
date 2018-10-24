@@ -41,6 +41,13 @@ Na pasta ```LucasSouza_teste\transp-u```, inicie o terminal e execute:
 
 
 ```
+npm install @angular-devkit/build-angular
+```
+
+Então:
+
+
+```
 ng build
 ```
 
